@@ -18,6 +18,7 @@
     @endif
 
     <div class="container mt-5">
+        @include('inc.messages')
         <div class="row">
             <div class="col-md-8">
                 @yield('content')
