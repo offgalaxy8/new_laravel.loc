@@ -21,6 +21,9 @@ class ContactController extends Controller
 
 
     public function allData() {
-        return view('messages', ['data' => Contact::all()]);
+        $contact = new Contact();
+        // $contact->orderBy('id', 'ASC')->take(2)->get()
+        // contact->where('name','<>','Вася')->get()
+        return view('messages', ['data' => $contact->where('name','<>','Вася')->get()]);
     }
 }

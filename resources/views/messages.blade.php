@@ -8,7 +8,9 @@
     @foreach($data as $el)
         <div class="alert alert-info">
             <h3>{{ $el->subject }}</h3>
-            <p>{{ $el->message }}</p>
+            <p>{{ $el->email }}</p>
+            <p><small>{{ $el->created_at }}</small></p>
+            <a href="#"><button class="btn btn-warning">Подробнее</button></a>
         </div>
     @endforeach
     </div>
