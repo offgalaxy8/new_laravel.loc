@@ -48,6 +48,11 @@ class ContactController extends Controller
         return redirect()->route('contact-data-one', $id)->with('success', 'Сообщение было обновлено');
     }
 
+    public function deleteMessage($id) {
+        $contact = Contact::find($id);
+        $contact->delete();
+        return redirect()->route('contact-data')->with('success', 'Сообщение было удалено');
+    }
 
 
 }
